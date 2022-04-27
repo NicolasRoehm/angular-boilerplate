@@ -1,0 +1,10 @@
+<!-- How to write CSS keyframes to indeterminate material design progress bar -->
+<!-- https://stackoverflow.com/a/34773398/7462178 -->
+
+<div class="slider">
+  <div class="line"></div>
+  <div class="subline inc"></div>
+  <div class="subline dec"></div>
+</div>
+
+<div class="text-center my-3" *ngIf="withLabel">{{ 'LOADING' | translate }}...</div>

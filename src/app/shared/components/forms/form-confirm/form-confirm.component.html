@@ -1,0 +1,17 @@
+<!-- NOTE Confirm form -->
+<form (ngSubmit)="onClickSubmit()">
+
+  <div class="text-center py-3">
+    <p>{{ 'ALERT_DELETE_ENTRY' | translate }}</p>
+  </div>
+
+  <!-- NOTE Submit -->
+  <div class="text-center">
+    <button type="button" class="btn btn-light" (click)="onClickClose()">
+      {{ 'CLOSE' | translate }}
+    </button>
+    <button type="submit" class="btn btn-danger ms-3">
+      {{ 'DELETE' | translate }}
+    </button>
+  </div>
+</form>

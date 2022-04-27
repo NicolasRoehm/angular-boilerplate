@@ -1,0 +1,8 @@
+{
+  "NOT_FOUND"          : "404 - Page not found",
+  "GO_TO_HOMEPAGE"     : "Go to homepage",
+  "LOADING"            : "Loading",
+  "CLOSE"              : "Close",
+  "DELETE"             : "Delete",
+  "ALERT_DELETE_ENTRY" : "Are you sure you want to delete this entry?"
+}

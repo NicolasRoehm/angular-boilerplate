@@ -1,0 +1,31 @@
+<ng-container *ngFor="let toast of toastManager.toasts">
+
+  <!-- NOTE With header -->
+  <ng-container *ngIf="toast.header && toast.withHeader else withoutHeader">
+
+    <ngb-toast class="bg-{{ toast.type }}"
+      [autohide]="toast.autohide"
+      [delay]="toast.delay"
+      (hide)="toastManager.remove(toast)">
+      <ng-template ngbToastHeader>
+        <!-- TODO Icon : Success / Info / Error -->
+        <div class="text-white me-auto">{{ toast.header }}</div>
+      </ng-template>
+      <div class="text-dark">{{ toast.body }}</div>
+    </ngb-toast>
+
+  </ng-container>
+
+  <!-- NOTE Without header -->
+  <ng-template #withoutHeader>
+
+    <ngb-toast class="bg-{{ toast.type }}"
+      [autohide]="toast.autohide"
+      [delay]="toast.delay"
+      (hide)="toastManager.remove(toast)">
+      <div class="text-dark">{{ toast.body }}</div>
+    </ngb-toast>
+
+  </ng-template>
+
+</ng-container>

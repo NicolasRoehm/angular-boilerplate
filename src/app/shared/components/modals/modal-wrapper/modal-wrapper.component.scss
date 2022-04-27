@@ -1,0 +1,9 @@
+.modal-header {
+  background: blue;
+  &, button {
+    color: white;
+  }
+  .modal-title {
+    text-transform: uppercase;
+  }
+}
