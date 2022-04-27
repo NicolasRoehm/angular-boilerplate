@@ -4,11 +4,32 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Usage
 - Rename `EasyAngular` and `easy-angular` with your project name
-- Place favicon generated with [RealFavIconGenerator](https://realfavicongenerator.net/) into `assets/img/favicon`
+- Place favicon generated with [RealFavIconGenerator](https://realfavicongenerator.net/) into `src/assets/img/favicon` folder
 
 ## Tools
-- https://app.quicktype.io/
-- https://realfavicongenerator.net/
+- Generate models form JSON - https://app.quicktype.io/
+- Generate favicon from SVG - https://realfavicongenerator.net/
+
+## Boilerplate content
+
+### Source code
+- Home & 404 pages
+- Shared components
+  - Blocks : toast & progress bar
+  - Forms : confirm
+  - Layouts : page & header
+  - Modals : wrapper
+- Enums : endpoints / environments / storage keys
+- Helpers : emitter / storage / string
+- Services : main & app
+- I18n : en.json
+
+### Packages
+- [Bootstrap 5](https://getbootstrap.com/) scss style & [ng-bootstrap](https://ng-bootstrap.github.io/) components
+- [Gretchen](https://github.com/truework/gretchen) fetch wrapper
+- [ArrayTyper](https://github.com/FranzStrudel/-caliatys-array-typer)
+- [angular-svg-icon](https://github.com/czeckd/angular-svg-icon)
+- [ngx-translate](https://github.com/ngx-translate/core)
 
 ## Development server
 
