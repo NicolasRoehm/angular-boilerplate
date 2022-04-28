@@ -21,6 +21,7 @@ import { SharedModule }         from '@shared/shared.module';
 import { StaticModule }         from './static/static.module';
 
 // Services
+import { AppService }           from '@services/app.service';
 
 // Components
 import { AppComponent }         from './app.component';
@@ -64,6 +65,7 @@ import { appInitFactory }       from '@shared/factories/app-init.factory';
     },
 
     // Services
+    AppService,
 
     // Pipes
     DatePipe,

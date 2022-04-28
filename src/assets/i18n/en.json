@@ -1,8 +1,20 @@
 {
   "NOT_FOUND"          : "404 - Page not found",
   "GO_TO_HOMEPAGE"     : "Go to homepage",
+  "WELCOME_TO"         : "Welcome to",
+  "PROJECT_DESC"       : "A Centurio boilerplate solution",
+  "LOGIN"              : "Log in",
+  "EMAIL"              : "E-mail",
+  "FORGOT_YOUR_PWD"    : "Forgot your password?",
+  "BACK_TO_LOGIN"      : "Back to login",
+  "VALIDATE_ACCOUNT"   : "Validate the account",
+  "VALIDATE"           : "Validate",
+  "PASSWORD"           : "Password",
   "LOADING"            : "Loading",
   "CLOSE"              : "Close",
   "DELETE"             : "Delete",
-  "ALERT_DELETE_ENTRY" : "Are you sure you want to delete this entry?"
+  "ALERT_DELETE_ENTRY" : "Are you sure you want to delete this entry?",
+  "RESET_PASSWORD"     : "Reset password",
+  "FIELD_REQUIRED"     : "This field is required",
+  "FIELD_EMAIL"        : "This field must be an email"
 }

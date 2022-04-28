@@ -1,30 +1,42 @@
 // Angular modules
-import { Component }   from '@angular/core';
-import { OnInit }      from '@angular/core';
+import { Component }     from '@angular/core';
+import { OnDestroy }     from '@angular/core';
+import { OnInit }        from '@angular/core';
 
-// Internal modules
-import { environment } from '@env/environment';
+// External modules
+import { Subscription }  from 'rxjs';
+
+// Helpers
+import { EmitterHelper } from '@helpers/emitter.helper';
 
 @Component({
-  selector    : 'app-layout-header',
-  templateUrl : './layout-header.component.html',
-  styleUrls   : ['./layout-header.component.scss']
+  selector    : 'app-auth',
+  templateUrl : './auth.component.html',
+  styleUrls   : ['./auth.component.scss']
 })
-export class LayoutHeaderComponent implements OnInit
+export class AuthComponent implements OnInit, OnDestroy
 {
-  public appName : string = environment.appName;
-  public isMenuCollapsed : boolean = true;
+  // NOTE Component properties
+  public isLoading : boolean = false;
+
+  // NOTE Subscription
+  private authLoadingSub : Subscription;
 
   constructor
   (
+
   )
   {
-
+    this.authLoadingSub = this.authLoadingSubscription();
   }
 
   public ngOnInit() : void
   {
+  }
 
+  public ngOnDestroy() : void
+  {
+    this.authLoadingSub.unsubscribe();
   }
 
   // -------------------------------------------------------------------------------
@@ -34,10 +46,6 @@ export class LayoutHeaderComponent implements OnInit
   // -------------------------------------------------------------------------------
   // ---- NOTE Actions -------------------------------------------------------------
   // -------------------------------------------------------------------------------
-
-  public async onClickLogout() : Promise<void>
-  {
-  }
 
   // -------------------------------------------------------------------------------
   // ---- NOTE Computed props ------------------------------------------------------
@@ -54,5 +62,13 @@ export class LayoutHeaderComponent implements OnInit
   // -------------------------------------------------------------------------------
   // ---- NOTE Subscriptions -------------------------------------------------------
   // -------------------------------------------------------------------------------
+
+  private authLoadingSubscription() : Subscription
+  {
+    return EmitterHelper.emitAuthLoading.subscribe((isLoading : boolean) =>
+    {
+      this.isLoading = isLoading;
+    });
+  }
 
 }

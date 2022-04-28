@@ -2,8 +2,8 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" [routerLink]="['/dashboard']">
-      <img src="./assets/img/project/logo.svg" alt="EasyAngular Logo" class="img-fluid me-2"/>
-      EasyAngular
+      <img src="./assets/img/project/logo.svg" [alt]="appName + ' Logo'" class="img-fluid me-2"/>
+      {{ appName }}
     </a>
     <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

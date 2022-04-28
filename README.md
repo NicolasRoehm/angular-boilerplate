@@ -13,7 +13,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Boilerplate content
 
 ### Source code
-- Home & 404 pages
+- Pages : auth (login, forgot pwd, validate account), home, 404
 - Shared components
   - Blocks : toast & progress bar
   - Forms : confirm

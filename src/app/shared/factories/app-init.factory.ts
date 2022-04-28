@@ -16,9 +16,9 @@ import { environment }          from '@env/environment';
  * Safely use translate.instant()
  * https://github.com/ngx-translate/core/issues/517
  */
-export function appInitFactory(translate : TranslateService, injector : Injector) : Promise<void>
+export function appInitFactory(translate : TranslateService, injector : Injector) : () => Promise<void>
 {
-  return new Promise((resolve, reject) =>
+  return () => new Promise<void>((resolve, reject) =>
   {
     const locationInitialized = injector.get(LOCATION_INITIALIZED, Promise.resolve());
     locationInitialized.then(async _ =>
