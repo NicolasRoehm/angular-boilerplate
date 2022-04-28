@@ -21,7 +21,10 @@ export class HomeComponent implements OnInit
 
   public ngOnInit() : void
   {
-
+    setTimeout(_ =>
+    {
+      this.isLoading = false;
+    }, 2000);
   }
 
   // -------------------------------------------------------------------------------

@@ -1,6 +1,7 @@
 // Angular modules
 import { Component }   from '@angular/core';
 import { OnInit }      from '@angular/core';
+import { Router }      from '@angular/router';
 
 // Internal modules
 import { environment } from '@env/environment';
@@ -12,11 +13,12 @@ import { environment } from '@env/environment';
 })
 export class LayoutHeaderComponent implements OnInit
 {
-  public appName : string = environment.appName;
+  public appName         : string  = environment.appName;
   public isMenuCollapsed : boolean = true;
 
   constructor
   (
+    private router : Router,
   )
   {
 
@@ -37,6 +39,8 @@ export class LayoutHeaderComponent implements OnInit
 
   public async onClickLogout() : Promise<void>
   {
+    // NOTE Redirect to login
+    this.router.navigate(['/auth/login']);
   }
 
   // -------------------------------------------------------------------------------

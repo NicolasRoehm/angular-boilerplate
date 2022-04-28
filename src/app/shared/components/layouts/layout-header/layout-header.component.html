@@ -13,7 +13,7 @@
       <ul class="navbar-nav mb-2 mb-lg-0 w-100">
 
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/dashboard']" [routerLinkActive]="['active']">{{ 'DASHBOARD' | translate }}</a>
+          <a class="nav-link" [routerLink]="['/home']" [routerLinkActive]="['active']">{{ 'HOME' | translate }}</a>
         </li>
 
         <li class="nav-item dropdown" ngbDropdown>
@@ -21,7 +21,7 @@
             {{ 'USER' | translate }}
           </a>
           <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" [routerLink]="['/user']" [routerLinkActive]="['active']">{{ 'MY_ACCOUNT' | translate }}</a></li>
+            <!-- <li><a class="dropdown-item" [routerLink]="['/user']" [routerLinkActive]="['active']">{{ 'MY_ACCOUNT' | translate }}</a></li> -->
             <li><a class="dropdown-item cursor-pointer" (click)="onClickLogout()">{{ 'LOGOUT' | translate }}</a></li>
           </ul>
         </li>
