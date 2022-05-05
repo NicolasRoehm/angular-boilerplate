@@ -3,15 +3,11 @@ import { NgModule }                 from '@angular/core';
 import { Routes }                   from '@angular/router';
 import { RouterModule }             from '@angular/router';
 
-// External modules
-
 // Components
 import { AuthComponent }            from './auth/auth.component';
-import { LoginComponent }           from './auth/login/login.component';
 import { ForgotPasswordComponent }  from './auth/forgot-password/forgot-password.component';
+import { LoginComponent }           from './auth/login/login.component';
 import { ValidateAccountComponent } from './auth/validate-account/validate-account.component';
-
-// Resolvers
 
 const routes : Routes = [
   {

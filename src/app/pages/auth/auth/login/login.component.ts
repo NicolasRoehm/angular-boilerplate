@@ -8,11 +8,11 @@ import { Router }        from '@angular/router';
 // Internal modules
 import { environment }   from '@env/environment';
 
-// Services
-import { AppService }    from '@services/app.service';
-
 // Helpers
 import { EmitterHelper } from '@helpers/emitter.helper';
+
+// Services
+import { AppService }    from '@services/app.service';
 
 @Component({
   selector    : 'app-login',

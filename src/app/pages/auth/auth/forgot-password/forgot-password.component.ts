@@ -5,11 +5,11 @@ import { FormControl }   from '@angular/forms';
 import { Validators }    from '@angular/forms';
 import { Router }        from '@angular/router';
 
-// Services
-import { AppService }    from '@services/app.service';
-
 // Helpers
 import { EmitterHelper } from '@helpers/emitter.helper';
+
+// Services
+import { AppService }    from '@services/app.service';
 
 @Component({
   selector    : 'app-forgot-password',
