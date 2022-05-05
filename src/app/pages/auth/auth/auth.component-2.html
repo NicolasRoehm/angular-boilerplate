@@ -1,0 +1,21 @@
+<!-- NOTE Header with Project logo -->
+<header class="position-fixed w-100 text-center py-2 bg-light">
+  <img src="./assets/img/project/logo.svg" [alt]="appName + ' Logo'" id="auth-svg" class="img-fluid"/>
+</header>
+
+<!-- NOTE Loading -->
+<app-progress-bar *ngIf="isLoading" class="position-fixed w-100"></app-progress-bar>
+
+<div class="auth-component-container">
+  <div class="auth-component">
+
+    <!-- NOTE Form -->
+    <router-outlet></router-outlet>
+
+  </div>
+</div>
+
+<!-- NOTE Footer with Application version -->
+<footer class="position-fixed w-100 text-white text-end px-2 d-flex align-items-center justify-content-end bg-primary">
+  <div class="small">{{ 'VERSION' | translate }} {{ appVersion }}</div>
+</footer>

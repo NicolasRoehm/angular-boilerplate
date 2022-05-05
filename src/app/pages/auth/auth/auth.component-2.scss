@@ -1,0 +1,41 @@
+// NOTE Header / Loading / Footer
+
+header, app-progress-bar, footer {
+  z-index: 10;
+}
+
+header {
+  top: 0;
+  height: 56px;
+}
+
+app-progress-bar {
+  top: 56px;
+}
+
+footer {
+  bottom: 0;
+  height: 40px;
+}
+
+// NOTE Layout
+
+.auth-component-container {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  .auth-component {
+    width: 100%;
+    max-width: 350px;
+    padding: 15px;
+    margin: auto;
+  }
+}
+
+// NOTE Images
+
+#auth-svg {
+  height: 40px;
+}

@@ -62,9 +62,7 @@ export class MainService
           console.error(from + ' -> error', error);
 
           // NOTE Show error message in toast
-          self.toastManager.show({
-            body : error
-          } as any);
+          self.toastManager.quickShow(error);
         }
       }
     };

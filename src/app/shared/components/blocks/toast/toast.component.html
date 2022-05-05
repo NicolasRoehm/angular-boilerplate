@@ -1,15 +1,15 @@
 <ng-container *ngFor="let toast of toastManager.toasts">
 
   <!-- NOTE With header -->
-  <ng-container *ngIf="toast.header && toast.withHeader else withoutHeader">
+  <ng-container *ngIf="toast.headerKey && toast.withHeader else withoutHeader">
 
     <ngb-toast class="bg-{{ toast.type }}"
-      [autohide]="toast.autohide"
+      [autohide]="toast.autoHide"
       [delay]="toast.delay"
-      (hide)="toastManager.remove(toast)">
+      (hide)="toastManager.remove(toast.id)">
       <ng-template ngbToastHeader>
         <!-- TODO Icon : Success / Info / Error -->
-        <div class="text-white me-auto">{{ toast.header }}</div>
+        <div class="text-white me-auto">{{ toast.headerKey | translate }}</div>
       </ng-template>
       <div class="text-dark">{{ toast.body }}</div>
     </ngb-toast>
@@ -20,9 +20,9 @@
   <ng-template #withoutHeader>
 
     <ngb-toast class="bg-{{ toast.type }}"
-      [autohide]="toast.autohide"
+      [autohide]="toast.autoHide"
       [delay]="toast.delay"
-      (hide)="toastManager.remove(toast)">
+      (hide)="toastManager.remove(toast.id)">
       <div class="text-dark">{{ toast.body }}</div>
     </ngb-toast>
 

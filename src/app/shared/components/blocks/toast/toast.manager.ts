@@ -1,54 +1,52 @@
 // Angular modules
-import { Injectable }       from '@angular/core';
-
-// External modules
-import { TranslateService } from '@ngx-translate/core';
+import { Injectable } from '@angular/core';
 
 export type ToastType = 'success' | 'info' | 'warning' | 'danger';
 
 export class Toast
 {
-  header     ?: string;
-  withHeader  : boolean = true;
-  body        : string  = '';
-  type        : ToastType = 'danger';
-  autohide    : boolean = false;
-  delay       : number  = 10000; // 10 sec
+  public   id         !: number
+  readonly headerKey  ?: string;
+  public   withHeader  : boolean;
+  public   body        : string;
+  public   type        : ToastType;
+  public   autoHide    : boolean;
+  public   delay       : number;
+
+  constructor(body : string, type ?: ToastType)
+  {
+    this.withHeader = true;
+    this.body       = body;
+    this.type       = type ?? 'danger';
+    this.autoHide   = false;
+    this.delay      = 10000; // 10 sec
+
+    this.headerKey  = this.type.toUpperCase();
+  }
 }
 
 @Injectable({ providedIn : 'root' })
 export class ToastManager
 {
-  constructor(private translateService : TranslateService)
-  {
-  }
+  public  toasts  : Toast[] = [];
+  private counter : number  = 0;
 
-  public toasts : Toast[] = [];
+  constructor() {}
 
-  public show(customToast : Toast) : void
+  public show(toast : Toast) : void
   {
-    const defaultToast = new Toast();
-    const toast = Object.assign(defaultToast, customToast);
-    if (!toast.header && toast.withHeader)
-      toast.header = this.getTitleByType(toast.type);
+    toast.id = this.counter++;
     this.toasts.push(toast);
   }
 
-  public remove(toast : Toast) : void
+  public quickShow(body : string, type ?: ToastType) : void
   {
-    this.toasts = this.toasts.filter(t => t !== toast);
+    const toast = new Toast(body, type)
+    this.show(toast)
   }
 
-  private getTitleByType(type : ToastType) : string
+  public remove(id : number) : void
   {
-    switch (type)
-    {
-      case 'danger' :
-        return this.translateService.instant('ERROR');
-      case 'warning' :
-        return this.translateService.instant('WARNING');
-    }
-    return '';
+    this.toasts = this.toasts.filter(t => t.id !== id);
   }
-
 }

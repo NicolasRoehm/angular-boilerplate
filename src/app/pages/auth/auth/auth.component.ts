@@ -6,6 +6,9 @@ import { OnInit }        from '@angular/core';
 // External modules
 import { Subscription }  from 'rxjs';
 
+// Internal modules
+import { environment }   from '@env/environment';
+
 // Helpers
 import { EmitterHelper } from '@helpers/emitter.helper';
 
@@ -17,7 +20,9 @@ import { EmitterHelper } from '@helpers/emitter.helper';
 export class AuthComponent implements OnInit, OnDestroy
 {
   // NOTE Component properties
-  public isLoading : boolean = false;
+  public appName    : string  = environment.appName;
+  public appVersion : string  = environment.version;
+  public isLoading  : boolean = false;
 
   // NOTE Subscription
   private authLoadingSub : Subscription;
