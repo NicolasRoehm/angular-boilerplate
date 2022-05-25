@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "add-page": "ng g component pages/page-name --skip-tests && ng g m pages/page-name --routing"
+    "add-page": "ng g m pages/page-name --routing && ng g component pages/page-name --skip-tests"
   },
   "private": true,
   "dependencies": {
