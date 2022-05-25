@@ -17,7 +17,7 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
 
 // Internal modules
 import { AppRoutingModule }     from './app-routing.module';
-import { SharedModule }         from '@shared/shared.module';
+import { SharedModule }         from './shared/shared.module';
 import { StaticModule }         from './static/static.module';
 
 // Services
@@ -27,7 +27,7 @@ import { AppService }           from '@services/app.service';
 import { AppComponent }         from './app.component';
 
 // Factories
-import { appInitFactory }       from '@shared/factories/app-init.factory';
+import { appInitFactory }       from '@factories/app-init.factory';
 
 @NgModule({
   imports: [

@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "add-page": "ng g component pages/page-name --skip-tests && ng g m pages/page-name --routing"
   },
   "private": true,
   "dependencies": {

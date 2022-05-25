@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 // Enums
-import { EnvName } from '@shared/enums/environment.enum';
+import { EnvName } from '@enums/environment.enum';
 
 const scheme = 'http://';
 const host   = 'localhost';
