@@ -65,11 +65,6 @@ import { ModalWrapperDirective }     from './directives/modal-wrapper.directive'
     // Directives
     ModalWrapperDirective
   ],
-  entryComponents :
-  [
-    // Components
-
-  ],
   exports         :
   [
     // Angular modules

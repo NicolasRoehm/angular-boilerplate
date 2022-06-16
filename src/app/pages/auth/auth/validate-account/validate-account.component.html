@@ -13,9 +13,9 @@
         <label for="password" class="form-label text-start w-100">{{ 'PASSWORD' | translate }}</label>
         <input type="password" class="form-control" id="password"
           formControlName="password"
-          [ngClass]="{ 'is-invalid' : formGroup.controls['password'].errors && formGroup.controls['password'].touched }">
+          [ngClass]="{ 'is-invalid' : formGroup.controls.password.errors && formGroup.controls.password.touched }">
         <!-- NOTE Errors -->
-        <div class="invalid-feedback" *ngIf="formGroup.controls['password'].hasError('required')">
+        <div class="invalid-feedback" *ngIf="formGroup.controls.password.hasError('required')">
           {{ 'FIELD_REQUIRED' | translate }}
         </div>
       </div>

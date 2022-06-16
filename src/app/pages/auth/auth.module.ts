@@ -27,9 +27,5 @@ import { ValidateAccountComponent } from './auth/validate-account/validate-accou
 
     SharedModule
   ],
-  entryComponents :
-  [
-
-  ]
 })
 export class AuthModule { }

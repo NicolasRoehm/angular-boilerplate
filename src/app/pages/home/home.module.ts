@@ -20,9 +20,5 @@ import { HomeComponent }     from './home.component';
   [
     HomeComponent,
   ],
-  entryComponents :
-  [
-
-  ]
 })
 export class HomeModule { }

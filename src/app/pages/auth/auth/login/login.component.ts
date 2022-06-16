@@ -22,7 +22,10 @@ import { AppService }    from '@services/app.service';
 export class LoginComponent
 {
   public appName : string = environment.appName;
-  public formGroup !: FormGroup;
+  public formGroup !: FormGroup<{
+    email    : FormControl<string>,
+    password : FormControl<string>,
+  }>;
 
   constructor
   (
@@ -40,14 +43,14 @@ export class LoginComponent
   private initFormGroup() : void
   {
     this.formGroup = new FormGroup({
-      email      : new FormControl({
+      email      : new FormControl<string>({
         value    : '',
         disabled : false
-      }, [Validators.required, Validators.email]),
-      password   : new FormControl({
+      }, { validators : [Validators.required, Validators.email], nonNullable : true }),
+      password   : new FormControl<string>({
         value    : '',
         disabled : false
-      }, [Validators.required])
+      }, { validators : [Validators.required], nonNullable : true })
     });
   }
 
@@ -68,8 +71,8 @@ export class LoginComponent
   {
     EmitterHelper.sendAuthLoading(true);
 
-    const email    = this.formGroup.controls['email'].value;
-    const password = this.formGroup.controls['password'].value;
+    const email    = this.formGroup.controls.email.getRawValue();
+    const password = this.formGroup.controls.password.getRawValue();
     const success  = await this.appService.authenticate(email, password);
 
     EmitterHelper.sendAuthLoading(false);

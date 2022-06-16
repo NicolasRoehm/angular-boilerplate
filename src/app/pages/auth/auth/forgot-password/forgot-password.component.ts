@@ -18,7 +18,9 @@ import { AppService }    from '@services/app.service';
 })
 export class ForgotPasswordComponent
 {
-  public formGroup !: FormGroup;
+  public formGroup !: FormGroup<{
+    email : FormControl<string>
+  }>;
 
   constructor
   (
@@ -36,10 +38,10 @@ export class ForgotPasswordComponent
   private initFormGroup() : void
   {
     this.formGroup = new FormGroup({
-      email      : new FormControl({
-        value    : null,
+      email      : new FormControl<string>({
+        value    : '',
         disabled : false
-      }, [Validators.required, Validators.email]),
+      }, { validators : [Validators.required, Validators.email], nonNullable : true }),
     });
   }
 
@@ -60,7 +62,7 @@ export class ForgotPasswordComponent
   {
     EmitterHelper.sendAuthLoading(true);
 
-    const email : string = this.formGroup.controls['email'].value;
+    const email   = this.formGroup.controls.email.getRawValue();
     const success = await this.appService.forgotPassword(email);
 
     EmitterHelper.sendAuthLoading(false);

@@ -15,12 +15,12 @@
         <label for="email" class="form-label text-start w-100">{{ 'EMAIL' | translate }}</label>
         <input type="email" class="form-control" id="email"
           formControlName="email"
-          [ngClass]="{ 'is-invalid' : formGroup.controls['email'].errors && formGroup.controls['email'].touched }">
+          [ngClass]="{ 'is-invalid' : formGroup.controls.email.errors && formGroup.controls.email.touched }">
         <!-- NOTE Errors -->
-        <div class="invalid-feedback" *ngIf="formGroup.controls['email'].hasError('required')">
+        <div class="invalid-feedback" *ngIf="formGroup.controls.email.hasError('required')">
           {{ 'FIELD_REQUIRED' | translate }}
         </div>
-        <div class="invalid-feedback" *ngIf="formGroup.controls['email'].hasError('email')">
+        <div class="invalid-feedback" *ngIf="formGroup.controls.email.hasError('email')">
           {{ 'FIELD_EMAIL' | translate }}
         </div>
       </div>
@@ -30,9 +30,9 @@
         <label for="password" class="form-label text-start w-100">{{ 'PASSWORD' | translate }}</label>
         <input type="password" class="form-control" id="password"
           formControlName="password"
-          [ngClass]="{ 'is-invalid' : formGroup.controls['password'].errors && formGroup.controls['password'].touched }">
+          [ngClass]="{ 'is-invalid' : formGroup.controls.password.errors && formGroup.controls.password.touched }">
         <!-- NOTE Errors -->
-        <div class="invalid-feedback" *ngIf="formGroup.controls['password'].hasError('required')">
+        <div class="invalid-feedback" *ngIf="formGroup.controls.password.hasError('required')">
           {{ 'FIELD_REQUIRED' | translate }}
         </div>
       </div>

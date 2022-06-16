@@ -24,7 +24,9 @@ import { AppService }     from '@services/app.service';
 })
 export class ValidateAccountComponent implements OnInit
 {
-  public  formGroup    !: FormGroup;
+  public  formGroup    !: FormGroup<{
+    password : FormControl<string>
+  }>;
   private tokenFromUrl  : string = '';
 
   constructor
@@ -49,6 +51,20 @@ export class ValidateAccountComponent implements OnInit
   }
 
   // -------------------------------------------------------------------------------
+  // ---- NOTE Init ----------------------------------------------------------------
+  // -------------------------------------------------------------------------------
+
+  private initFormGroup() : void
+  {
+    this.formGroup = new FormGroup({
+      password   : new FormControl<string>({
+        value    : '',
+        disabled : false
+      }, { validators : [Validators.required], nonNullable : true }),
+    });
+  }
+
+  // -------------------------------------------------------------------------------
   // ---- NOTE Actions -------------------------------------------------------------
   // -------------------------------------------------------------------------------
 
@@ -61,20 +77,6 @@ export class ValidateAccountComponent implements OnInit
   }
 
   // -------------------------------------------------------------------------------
-  // ---- NOTE Init ----------------------------------------------------------------
-  // -------------------------------------------------------------------------------
-
-  private initFormGroup() : void
-  {
-    this.formGroup = new FormGroup({
-      password   : new FormControl({
-        value    : null,
-        disabled : false
-      }, [Validators.required]),
-    });
-  }
-
-  // -------------------------------------------------------------------------------
   // ---- NOTE Requests ------------------------------------------------------------
   // -------------------------------------------------------------------------------
 
@@ -82,8 +84,8 @@ export class ValidateAccountComponent implements OnInit
   {
     EmitterHelper.sendAuthLoading(true);
 
-    const password : string = this.formGroup.controls['password'].value;
-    const success = await this.appService.validateAccount(this.tokenFromUrl, password);
+    const password = this.formGroup.controls.password.getRawValue();
+    const success  = await this.appService.validateAccount(this.tokenFromUrl, password);
 
     EmitterHelper.sendAuthLoading(false);
 
