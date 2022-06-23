@@ -30,6 +30,7 @@
       "@modals/*": ["src/app/shared/components/modals/*"],
       "@enums/*": ["src/app/shared/enums/*"],
       "@directives/*": ["src/app/shared/directives/*"],
+      "@pipes/*": ["src/app/shared/pipes/*"],
       "@validators/*": ["src/app/shared/validators/*"],
       "@factories/*": ["src/app/shared/factories/*"],
       "@guards/*": ["src/app/shared/guards/*"],
