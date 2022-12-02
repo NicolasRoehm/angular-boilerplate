@@ -23,8 +23,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   - Layouts : page & header
   - Modals : wrapper
 - Enums : endpoints / environments / storage keys
-- Helpers : emitter / storage / string
-- Services : main & app
+- Helpers : storage / string
+- Services : main & app / store
 - I18n : en.json
 
 ### Packages
