@@ -1,15 +1,13 @@
 // Angular modules
-import { Component }     from '@angular/core';
-import { FormGroup }     from '@angular/forms';
-import { FormControl }   from '@angular/forms';
-import { Validators }    from '@angular/forms';
-import { Router }        from '@angular/router';
-
-// Helpers
-import { EmitterHelper } from '@helpers/emitter.helper';
+import { Component }    from '@angular/core';
+import { FormGroup }    from '@angular/forms';
+import { FormControl }  from '@angular/forms';
+import { Validators }   from '@angular/forms';
+import { Router }       from '@angular/router';
 
 // Services
-import { AppService }    from '@services/app.service';
+import { AppService }   from '@services/app.service';
+import { StoreService } from '@services/store.service';
 
 @Component({
   selector    : 'app-forgot-password',
@@ -24,8 +22,9 @@ export class ForgotPasswordComponent
 
   constructor
   (
-    public  router     : Router,
-    private appService : AppService,
+    public  router       : Router,
+    private storeService : StoreService,
+    private appService   : AppService,
   )
   {
     this.initFormGroup();
@@ -60,12 +59,12 @@ export class ForgotPasswordComponent
 
   private async forgotPassword() : Promise<void>
   {
-    EmitterHelper.sendAuthLoading(true);
+    this.storeService.setIsLoading(true);
 
     const email   = this.formGroup.controls.email.getRawValue();
     const success = await this.appService.forgotPassword(email);
 
-    EmitterHelper.sendAuthLoading(false);
+    this.storeService.setIsLoading(false);
 
     if (!success)
       return;

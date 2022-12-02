@@ -4,7 +4,7 @@
 </header>
 
 <!-- NOTE Loading -->
-<app-progress-bar *ngIf="isLoading" class="position-fixed w-100"></app-progress-bar>
+<app-progress-bar *ngIf="storeService.isLoading$ | async" class="position-fixed w-100"></app-progress-bar>
 
 <div class="auth-component-container">
   <div class="auth-component">

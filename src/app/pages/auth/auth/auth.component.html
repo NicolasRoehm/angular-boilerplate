@@ -1,4 +1,4 @@
-<app-progress-bar class="position-fixed w-100" *ngIf="isLoading"></app-progress-bar>
+<app-progress-bar class="position-fixed w-100" *ngIf="storeService.isLoading$ | async"></app-progress-bar>
 <div class="row g-0">
   <div class="col img-wrapper d-none d-md-flex">
     <img [src]="'assets/img/project/login.png'" alt="Login image">

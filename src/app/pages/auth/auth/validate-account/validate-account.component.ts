@@ -11,11 +11,9 @@ import { Params }         from '@angular/router';
 // Internal modules
 import { environment }    from '@env/environment';
 
-// Helpers
-import { EmitterHelper }  from '@helpers/emitter.helper';
-
 // Services
 import { AppService }     from '@services/app.service';
+import { StoreService }   from '@services/store.service';
 
 @Component({
   selector    : 'app-validate-account',
@@ -32,6 +30,7 @@ export class ValidateAccountComponent implements OnInit
   constructor
   (
     private router         : Router,
+    private storeService   : StoreService,
     private activatedRoute : ActivatedRoute,
     private appService     : AppService,
   )
@@ -82,12 +81,12 @@ export class ValidateAccountComponent implements OnInit
 
   private async validateNewAccount() : Promise<void>
   {
-    EmitterHelper.sendAuthLoading(true);
+    this.storeService.setIsLoading(true);
 
     const password = this.formGroup.controls.password.getRawValue();
     const success  = await this.appService.validateAccount(this.tokenFromUrl, password);
 
-    EmitterHelper.sendAuthLoading(false);
+    this.storeService.setIsLoading(false);
 
     if (!success)
       return;

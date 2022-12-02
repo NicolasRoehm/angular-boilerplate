@@ -1,18 +1,16 @@
 // Angular modules
-import { Component }     from '@angular/core';
-import { FormGroup }     from '@angular/forms';
-import { FormControl }   from '@angular/forms';
-import { Validators }    from '@angular/forms';
-import { Router }        from '@angular/router';
+import { Component }    from '@angular/core';
+import { FormGroup }    from '@angular/forms';
+import { FormControl }  from '@angular/forms';
+import { Validators }   from '@angular/forms';
+import { Router }       from '@angular/router';
 
 // Internal modules
-import { environment }   from '@env/environment';
-
-// Helpers
-import { EmitterHelper } from '@helpers/emitter.helper';
+import { environment }  from '@env/environment';
 
 // Services
-import { AppService }    from '@services/app.service';
+import { AppService }   from '@services/app.service';
+import { StoreService } from '@services/store.service';
 
 @Component({
   selector    : 'app-login',
@@ -29,8 +27,9 @@ export class LoginComponent
 
   constructor
   (
-    private router     : Router,
-    private appService : AppService,
+    private router       : Router,
+    private storeService : StoreService,
+    private appService   : AppService,
   )
   {
     this.initFormGroup();
@@ -69,13 +68,13 @@ export class LoginComponent
 
   private async authenticate() : Promise<void>
   {
-    EmitterHelper.sendAuthLoading(true);
+    this.storeService.setIsLoading(true);
 
     const email    = this.formGroup.controls.email.getRawValue();
     const password = this.formGroup.controls.password.getRawValue();
     const success  = await this.appService.authenticate(email, password);
 
-    EmitterHelper.sendAuthLoading(false);
+    this.storeService.setIsLoading(false);
 
     if (!success)
       return;
