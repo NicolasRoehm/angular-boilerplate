@@ -2,7 +2,7 @@
 import { EnvName } from '@enums/environment.enum';
 
 // Packages
-import { version } from '../../package.json';
+import packageInfo from '../../package.json';
 
 const scheme = 'http://';
 const host   = 'localhost';
@@ -13,7 +13,7 @@ const baseUrl = scheme + host + port + path;
 
 export const environment = {
   production      : true,
-  version         : version,
+  version         : packageInfo.version,
   appName         : 'EasyAngular',
   envName         : EnvName.PROD,
   defaultLanguage : 'en',

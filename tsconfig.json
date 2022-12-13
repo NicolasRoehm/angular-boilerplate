@@ -9,6 +9,7 @@
     "noImplicitOverride": false,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
+    "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
