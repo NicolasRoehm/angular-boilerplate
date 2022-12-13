@@ -10,7 +10,7 @@ import { Type }                     from '@angular/core';
 import { NgbActiveModal }           from '@ng-bootstrap/ng-bootstrap';
 
 // Directives
-import { ModalWrapperDirective }    from '../../../directives/modal-wrapper.directive';
+import { ModalWrapperDirective }    from '@directives/modal-wrapper.directive';
 
 // Dynamic component loader - Angular
 // https://angular.io/guide/dynamic-component-loader
@@ -38,9 +38,14 @@ export class ModalWrapperComponent implements OnInit
 {
   @Input() component     : any;
   @Input() componentData : any;
-  @Input() modalData    !: {
-    title         ?: string,
-    headerClasses ?: string
+  @Input() modalData     : {
+    title         : string,
+    headerClasses : string,
+    closable      : boolean,
+  } = {
+    title         : '',
+    headerClasses : '',
+    closable      : true,
   };
 
   @ViewChild(ModalWrapperDirective, { static : true }) modalWrapperHost !: ModalWrapperDirective;
