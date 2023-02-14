@@ -1,6 +1,6 @@
 # EasyAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.4.
 
 ## Usage
 - Rename `EasyAngular` and `easy-angular` with your project name
@@ -29,7 +29,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Packages
 - [Bootstrap 5](https://getbootstrap.com/) scss style & [ng-bootstrap](https://ng-bootstrap.github.io/) components
-- [Gretchen](https://github.com/truework/gretchen) fetch wrapper
+- [Axios](https://github.com/axios/axios) fetch wrapper
 - [ArrayTyper](https://github.com/FranzStrudel/-caliatys-array-typer)
 - [angular-svg-icon](https://github.com/czeckd/angular-svg-icon)
 - [ngx-translate](https://github.com/ngx-translate/core)

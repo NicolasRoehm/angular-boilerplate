@@ -13,12 +13,12 @@ export class Toast
   public   autoHide    : boolean;
   public   delay       : number;
 
-  constructor(body : string, type ?: ToastType)
+  constructor(body : string, type ?: ToastType, autoHide : boolean = false)
   {
     this.withHeader = true;
     this.body       = body;
     this.type       = type ?? 'danger';
-    this.autoHide   = false;
+    this.autoHide   = autoHide;
     this.delay      = 10000; // 10 sec
 
     this.headerKey  = this.type.toUpperCase();
@@ -39,10 +39,10 @@ export class ToastManager
     this.toasts.push(toast);
   }
 
-  public quickShow(body : string, type ?: ToastType) : void
+  public quickShow(body : string, type ?: ToastType, autoHide : boolean = false) : void
   {
-    const toast = new Toast(body, type)
-    this.show(toast)
+    const toast = new Toast(body, type, autoHide);
+    this.show(toast);
   }
 
   public remove(id : number) : void

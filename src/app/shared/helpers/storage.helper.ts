@@ -1,14 +1,14 @@
 // Angular modules
-import { Injectable }  from '@angular/core';
+import { Injectable }   from '@angular/core';
 
 // Internal modules
-import { environment } from '@env/environment';
+import { environment }  from '@env/environment';
 
 // Enums
-import { StorageKey }  from '../enums/storage-key.enum';
+import { StorageKey }   from '@enums/storage-key.enum';
 
 // Models
-// import { User }        from '../models/user.model';
+// import { AuthResponse } from '@models/auth-response.model';
 
 @Injectable()
 export class StorageHelper
@@ -16,31 +16,31 @@ export class StorageHelper
   private static storagePrefix : string = environment.appName + '_' + environment.version + '_';
 
   // ----------------------------------------------------------------------------------------------
-  // SECTION Methods -----------------------------------------------------------------------------------
+  // SECTION Methods ------------------------------------------------------------------------------
   // ----------------------------------------------------------------------------------------------
 
   // NOTE Token
 
-  // public static setUser(user : User) : void
+  // public static setToken(user : AuthResponse) : void
   // {
-  //   StorageHelper.setItem(StorageKey.USER, user);
+  //   StorageHelper.setItem(StorageKey.TOKEN, user);
   // }
 
-  // public static removeUser() : void
+  // public static removeToken() : void
   // {
-  //   StorageHelper.removeItem(StorageKey.USER);
+  //   StorageHelper.removeItem(StorageKey.TOKEN);
   // }
 
-  // public static getUser() : User | null
+  // public static getToken() : AuthResponse | null
   // {
-  //   const data = StorageHelper.getItem(StorageKey.USER);
-  //   return data ? new User(data) : null;
+  //   const data = StorageHelper.getItem(StorageKey.TOKEN);
+  //   return data ? new AuthResponse(data) : null;
   // }
 
   // !SECTION Methods
 
   // ----------------------------------------------------------------------------------------------
-  // SECTION LocalStorage ------------------------------------------------------------------------------
+  // SECTION LocalStorage -------------------------------------------------------------------------
   // ----------------------------------------------------------------------------------------------
 
   public static setItem(key : string, value : any, prefix : boolean = true) : void

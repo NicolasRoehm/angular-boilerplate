@@ -7,7 +7,7 @@ import { TranslateService }     from '@ngx-translate/core';
 import { firstValueFrom }       from 'rxjs';
 
 // Helpers
-// import { StorageHelper }        from '../helpers/storage.helper';
+// import { StorageHelper }        from '@helpers/storage.helper';
 
 // Internal modules
 import { environment }          from '@env/environment';
