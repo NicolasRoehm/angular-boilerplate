@@ -20,7 +20,7 @@ const routes : Routes = [
 ];
 
 @NgModule({
-  imports : [RouterModule.forRoot(routes, { relativeLinkResolution : 'legacy', onSameUrlNavigation : 'reload' })],
+  imports : [RouterModule.forRoot(routes, { onSameUrlNavigation: 'reload' })],
   exports : [RouterModule]
 })
 export class AppRoutingModule { }
