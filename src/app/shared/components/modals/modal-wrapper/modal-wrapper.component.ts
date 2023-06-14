@@ -29,7 +29,6 @@ export interface FormComponent
 }
 
 @Component({
-  moduleId    : module.id,
   selector    : 'app-modal-wrapper',
   templateUrl : 'modal-wrapper.component.html',
   styleUrls   : ['modal-wrapper.component.scss']
