@@ -24,7 +24,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   - Modals : wrapper
 - Enums : endpoints / environments / storage keys
 - Helpers : storage / string
-- Services : main & app / store
+- Services : app (for requests) / store (for state management)
 - I18n : en.json
 
 ### Packages
