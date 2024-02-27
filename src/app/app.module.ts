@@ -30,50 +30,7 @@ import { AppComponent }         from './app.component';
 // Factories
 import { appInitFactory }       from '@factories/app-init.factory';
 
-@NgModule({
-  imports: [
-    // Angular modules
-    HttpClientModule,
-    BrowserAnimationsModule,
-    BrowserModule,
-    // External modules
-    TranslateModule.forRoot({
-        loader: {
-            provide: TranslateLoader,
-            useFactory: (createTranslateLoader),
-            deps: [HttpClient]
-        }
-    }),
-    AngularSvgIconModule.forRoot(),
-    StaticModule,
-    AppRoutingModule
-],
-  declarations: [
-    AppComponent
-  ],
-  providers: [
-    // External modules
-    {
-      provide    : APP_INITIALIZER,
-      useFactory : appInitFactory,
-      deps       : [ TranslateService, Injector ],
-      multi      : true
-    },
 
-    // Services
-    AppService,
-    StoreService,
-
-    // Pipes
-    DatePipe,
-
-    // Guards
-
-    // Interceptors
-  ],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
 
 export function createTranslateLoader(http : HttpClient)
 {
