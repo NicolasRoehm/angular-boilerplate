@@ -4,7 +4,7 @@ import { NgModule }                 from '@angular/core';
 
 // Internal modules
 import { AuthRoutingModule }        from './auth-routing.module';
-import { SharedModule }             from '../../shared/shared.module';
+
 
 // Components
 import { AuthComponent }            from './auth/auth.component';
@@ -14,13 +14,12 @@ import { ValidateAccountComponent } from './auth/validate-account/validate-accou
 
 @NgModule({
     imports: [
-        CommonModule,
-        AuthRoutingModule,
-        SharedModule,
-        AuthComponent,
-        LoginComponent,
-        ForgotPasswordComponent,
-        ValidateAccountComponent
-    ],
+    CommonModule,
+    AuthRoutingModule,
+    AuthComponent,
+    LoginComponent,
+    ForgotPasswordComponent,
+    ValidateAccountComponent
+],
 })
 export class AuthModule { }

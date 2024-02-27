@@ -17,7 +17,7 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
 
 // Internal modules
 import { AppRoutingModule }     from './app-routing.module';
-import { SharedModule }         from './shared/shared.module';
+
 import { StaticModule }         from './static/static.module';
 
 // Services
@@ -36,23 +36,18 @@ import { appInitFactory }       from '@factories/app-init.factory';
     HttpClientModule,
     BrowserAnimationsModule,
     BrowserModule,
-
     // External modules
     TranslateModule.forRoot({
-      loader :
-      {
-        provide    : TranslateLoader,
-        useFactory : (createTranslateLoader),
-        deps       : [HttpClient]
-      }
+        loader: {
+            provide: TranslateLoader,
+            useFactory: (createTranslateLoader),
+            deps: [HttpClient]
+        }
     }),
     AngularSvgIconModule.forRoot(),
-
-    // Internal modules
-    SharedModule,
     StaticModule,
     AppRoutingModule
-  ],
+],
   declarations: [
     AppComponent
   ],
