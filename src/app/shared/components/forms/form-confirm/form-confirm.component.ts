@@ -4,11 +4,15 @@ import { OnInit }       from '@angular/core';
 import { Input }        from '@angular/core';
 import { Output }       from '@angular/core';
 import { EventEmitter } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector    : 'app-form-confirm',
-  templateUrl : './form-confirm.component.html',
-  styleUrls   : ['./form-confirm.component.scss']
+    selector: 'app-form-confirm',
+    templateUrl: './form-confirm.component.html',
+    styleUrls: ['./form-confirm.component.scss'],
+    standalone: true,
+    imports: [FormsModule, TranslateModule]
 })
 export class FormConfirmComponent implements OnInit
 {

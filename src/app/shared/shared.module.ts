@@ -31,74 +31,54 @@ import { ModalWrapperDirective }     from './directives/modal-wrapper.directive'
 
 
 @NgModule({
-  imports         :
-  [
-    // Angular modules
-    CommonModule,
-    RouterModule,
-    FormsModule,
-    ReactiveFormsModule,
-
-    // External modules
-    TranslateModule,
-    AngularSvgIconModule,
-    NgbModule,
-  ],
-  declarations    :
-  [
-    // Components
-    ToastComponent,
-    ProgressBarComponent,
-
-    // Forms
-    FormConfirmComponent,
-
-    // Modals
-    ModalWrapperComponent,
-
-    // Layouts
-    LayoutHeaderComponent,
-    PageLayoutComponent,
-
-    // Pipes
-
-    // Directives
-    ModalWrapperDirective
-  ],
-  exports         :
-  [
-    // Angular modules
-    CommonModule,
-    RouterModule,
-    FormsModule,
-    ReactiveFormsModule,
-
-    // External modules
-    TranslateModule,
-    AngularSvgIconModule,
-    NgbModule,
-
-    // Components
-    ToastComponent,
-    ProgressBarComponent,
-
-    // Forms
-    FormConfirmComponent,
-
-    // Modals
-    ModalWrapperComponent,
-
-    // Layouts
-    LayoutHeaderComponent,
-    PageLayoutComponent,
-
-    // Pipes
-
-    // Directives
-    ModalWrapperDirective
-  ],
-  providers       :
-  [
-  ]
+    imports: [
+        // Angular modules
+        CommonModule,
+        RouterModule,
+        FormsModule,
+        ReactiveFormsModule,
+        // External modules
+        TranslateModule,
+        AngularSvgIconModule,
+        NgbModule,
+        // Components
+        ToastComponent,
+        ProgressBarComponent,
+        // Forms
+        FormConfirmComponent,
+        // Modals
+        ModalWrapperComponent,
+        // Layouts
+        LayoutHeaderComponent,
+        PageLayoutComponent,
+        // Pipes
+        // Directives
+        ModalWrapperDirective,
+    ],
+    exports: [
+        // Angular modules
+        CommonModule,
+        RouterModule,
+        FormsModule,
+        ReactiveFormsModule,
+        // External modules
+        TranslateModule,
+        AngularSvgIconModule,
+        NgbModule,
+        // Components
+        ToastComponent,
+        ProgressBarComponent,
+        // Forms
+        FormConfirmComponent,
+        // Modals
+        ModalWrapperComponent,
+        // Layouts
+        LayoutHeaderComponent,
+        PageLayoutComponent,
+        // Pipes
+        // Directives
+        ModalWrapperDirective
+    ],
+    providers: []
 })
 export class SharedModule {}

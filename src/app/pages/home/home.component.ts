@@ -1,11 +1,16 @@
 // Angular modules
 import { Component } from '@angular/core';
 import { OnInit }    from '@angular/core';
+import { ProgressBarComponent } from '../../shared/components/blocks/progress-bar/progress-bar.component';
+import { NgIf } from '@angular/common';
+import { PageLayoutComponent } from '../../shared/components/layouts/page-layout/page-layout.component';
 
 @Component({
-  selector    : 'app-home',
-  templateUrl : './home.component.html',
-  styleUrls   : ['./home.component.scss']
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss'],
+    standalone: true,
+    imports: [PageLayoutComponent, NgIf, ProgressBarComponent]
 })
 export class HomeComponent implements OnInit
 {

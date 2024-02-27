@@ -13,19 +13,14 @@ import { LoginComponent }           from './auth/login/login.component';
 import { ValidateAccountComponent } from './auth/validate-account/validate-account.component';
 
 @NgModule({
-  declarations    :
-  [
-    AuthComponent,
-    LoginComponent,
-    ForgotPasswordComponent,
-    ValidateAccountComponent
-  ],
-  imports         :
-  [
-    CommonModule,
-    AuthRoutingModule,
-
-    SharedModule
-  ],
+    imports: [
+        CommonModule,
+        AuthRoutingModule,
+        SharedModule,
+        AuthComponent,
+        LoginComponent,
+        ForgotPasswordComponent,
+        ValidateAccountComponent
+    ],
 })
 export class AuthModule { }

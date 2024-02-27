@@ -9,14 +9,10 @@ import { StaticRoutingModule } from './static-routing.module';
 import { NotFoundComponent }   from './not-found/not-found.component';
 
 @NgModule({
-  imports      :
-  [
-    SharedModule,
-    StaticRoutingModule
-  ],
-  declarations :
-  [
-    NotFoundComponent
-  ]
+    imports: [
+        SharedModule,
+        StaticRoutingModule,
+        NotFoundComponent
+    ]
 })
 export class StaticModule {}

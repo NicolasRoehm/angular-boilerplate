@@ -1,7 +1,7 @@
 // Angular modules
 import { OnInit }         from '@angular/core';
 import { Component }      from '@angular/core';
-import { FormGroup }      from '@angular/forms';
+import { FormGroup, FormsModule, ReactiveFormsModule }      from '@angular/forms';
 import { FormControl }    from '@angular/forms';
 import { Validators }     from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
@@ -14,11 +14,15 @@ import { environment }    from '@env/environment';
 // Services
 import { AppService }     from '@services/app.service';
 import { StoreService }   from '@services/store.service';
+import { TranslateModule } from '@ngx-translate/core';
+import { NgClass, NgIf } from '@angular/common';
 
 @Component({
-  selector    : 'app-validate-account',
-  templateUrl : './validate-account.component.html',
-  styleUrls   : ['./validate-account.component.scss']
+    selector: 'app-validate-account',
+    templateUrl: './validate-account.component.html',
+    styleUrls: ['./validate-account.component.scss'],
+    standalone: true,
+    imports: [FormsModule, ReactiveFormsModule, NgClass, NgIf, TranslateModule]
 })
 export class ValidateAccountComponent implements OnInit
 {

@@ -1,9 +1,9 @@
 // Angular modules
 import { Component }    from '@angular/core';
-import { FormGroup }    from '@angular/forms';
+import { FormGroup, FormsModule, ReactiveFormsModule }    from '@angular/forms';
 import { FormControl }  from '@angular/forms';
 import { Validators }   from '@angular/forms';
-import { Router }       from '@angular/router';
+import { Router, RouterLink }       from '@angular/router';
 
 // Internal modules
 import { environment }  from '@env/environment';
@@ -11,11 +11,15 @@ import { environment }  from '@env/environment';
 // Services
 import { AppService }   from '@services/app.service';
 import { StoreService } from '@services/store.service';
+import { TranslateModule } from '@ngx-translate/core';
+import { NgClass, NgIf } from '@angular/common';
 
 @Component({
-  selector    : 'app-login',
-  templateUrl : './login.component.html',
-  styleUrls   : ['./login.component.scss']
+    selector: 'app-login',
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.scss'],
+    standalone: true,
+    imports: [FormsModule, ReactiveFormsModule, NgClass, NgIf, RouterLink, TranslateModule]
 })
 export class LoginComponent
 {

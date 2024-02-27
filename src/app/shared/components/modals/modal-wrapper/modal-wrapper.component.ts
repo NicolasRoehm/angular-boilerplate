@@ -11,6 +11,8 @@ import { NgbActiveModal }           from '@ng-bootstrap/ng-bootstrap';
 
 // Directives
 import { ModalWrapperDirective }    from '@directives/modal-wrapper.directive';
+import { ModalWrapperDirective as ModalWrapperDirective_1 } from '../../../directives/modal-wrapper.directive';
+import { NgIf } from '@angular/common';
 
 // Dynamic component loader - Angular
 // https://angular.io/guide/dynamic-component-loader
@@ -29,9 +31,11 @@ export interface FormComponent
 }
 
 @Component({
-  selector    : 'app-modal-wrapper',
-  templateUrl : 'modal-wrapper.component.html',
-  styleUrls   : ['modal-wrapper.component.scss']
+    selector: 'app-modal-wrapper',
+    templateUrl: 'modal-wrapper.component.html',
+    styleUrls: ['modal-wrapper.component.scss'],
+    standalone: true,
+    imports: [NgIf, ModalWrapperDirective_1]
 })
 export class ModalWrapperComponent implements OnInit
 {
