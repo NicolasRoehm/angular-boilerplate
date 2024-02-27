@@ -1,18 +1,18 @@
 // Angular modules
-import { Component }                from '@angular/core';
-import { Input }                    from '@angular/core';
-import { OnInit }                   from '@angular/core';
-import { ViewChild }                from '@angular/core';
-import { EventEmitter }             from '@angular/core';
-import { Type }                     from '@angular/core';
+import { NgIf }                                             from '@angular/common';
+import { Component }                                        from '@angular/core';
+import { Input }                                            from '@angular/core';
+import { OnInit }                                           from '@angular/core';
+import { ViewChild }                                        from '@angular/core';
+import { EventEmitter }                                     from '@angular/core';
+import { Type }                                             from '@angular/core';
 
 // External modules
-import { NgbActiveModal }           from '@ng-bootstrap/ng-bootstrap';
+import { NgbActiveModal }                                   from '@ng-bootstrap/ng-bootstrap';
 
 // Directives
-import { ModalWrapperDirective }    from '@directives/modal-wrapper.directive';
 import { ModalWrapperDirective as ModalWrapperDirective_1 } from '../../../directives/modal-wrapper.directive';
-import { NgIf } from '@angular/common';
+import { ModalWrapperDirective }                            from '@directives/modal-wrapper.directive';
 
 // Dynamic component loader - Angular
 // https://angular.io/guide/dynamic-component-loader
@@ -31,11 +31,11 @@ export interface FormComponent
 }
 
 @Component({
-    selector: 'app-modal-wrapper',
-    templateUrl: 'modal-wrapper.component.html',
-    styleUrls: ['modal-wrapper.component.scss'],
-    standalone: true,
-    imports: [NgIf, ModalWrapperDirective_1]
+  selector    : 'app-modal-wrapper',
+  templateUrl : 'modal-wrapper.component.html',
+  styleUrls   : ['modal-wrapper.component.scss'],
+  standalone  : true,
+  imports     : [NgIf, ModalWrapperDirective_1]
 })
 export class ModalWrapperComponent implements OnInit
 {

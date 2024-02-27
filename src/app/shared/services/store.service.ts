@@ -1,5 +1,8 @@
 // Angular modules
+import { isPlatformServer } from '@angular/common';
+import { Inject }           from '@angular/core';
 import { Injectable }       from '@angular/core';
+import { PLATFORM_ID }      from '@angular/core';
 
 // External modules
 import { TranslateService } from '@ngx-translate/core';
@@ -16,6 +19,7 @@ import { environment }      from '@env/environment';
 export class StoreService
 {
   // NOTE Data
+  private readonly _isServerSource  = new BehaviorSubject<boolean>(isPlatformServer(this.platformId));
   private readonly _pageTitleSource = new BehaviorSubject<string>(environment.appName);
   private readonly _isLoadingSource = new BehaviorSubject<boolean>(false);
 
@@ -25,9 +29,24 @@ export class StoreService
 
   constructor
   (
+    @Inject(PLATFORM_ID) private platformId : Object,
     private translateService : TranslateService
   )
   {
+  }
+
+  // -------------------------------------------------------------------------------
+  // NOTE Server -------------------------------------------------------------------
+  // -------------------------------------------------------------------------------
+
+  public getIsServer() : boolean
+  {
+    return this._isServerSource.getValue();
+  }
+
+  public setIsServer(isServer : boolean) : void
+  {
+    this._isServerSource.next(isServer);
   }
 
   // -------------------------------------------------------------------------------

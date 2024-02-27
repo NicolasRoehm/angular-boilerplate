@@ -6,4 +6,4 @@
   </div>
 </div>
 
-<app-toast aria-live="polite" aria-atomic="true"></app-toast>
+<app-toast aria-live="polite" aria-atomic="true" *ngIf="!isServerSide"></app-toast>

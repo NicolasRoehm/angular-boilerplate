@@ -1,19 +1,26 @@
 // Angular modules
-import { Component }   from '@angular/core';
-import { OnInit }      from '@angular/core';
-import { Router, RouterLink, RouterLinkActive }      from '@angular/router';
+import { Component }         from '@angular/core';
+import { OnInit }            from '@angular/core';
+import { Router }            from '@angular/router';
+import { RouterLink }        from '@angular/router';
+import { RouterLinkActive }  from '@angular/router';
+
+// External modules
+import { NgbCollapse }       from '@ng-bootstrap/ng-bootstrap';
+import { NgbDropdown }       from '@ng-bootstrap/ng-bootstrap';
+import { NgbDropdownToggle } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDropdownMenu }   from '@ng-bootstrap/ng-bootstrap';
+import { TranslateModule }   from '@ngx-translate/core';
 
 // Internal modules
-import { environment } from '@env/environment';
-import { TranslateModule } from '@ngx-translate/core';
-import { NgbCollapse, NgbDropdown, NgbDropdownToggle, NgbDropdownMenu } from '@ng-bootstrap/ng-bootstrap';
+import { environment }       from '@env/environment';
 
 @Component({
-    selector: 'app-layout-header',
-    templateUrl: './layout-header.component.html',
-    styleUrls: ['./layout-header.component.scss'],
-    standalone: true,
-    imports: [RouterLink, NgbCollapse, RouterLinkActive, NgbDropdown, NgbDropdownToggle, NgbDropdownMenu, TranslateModule]
+  selector    : 'app-layout-header',
+  templateUrl : './layout-header.component.html',
+  styleUrls   : ['./layout-header.component.scss'],
+  standalone  : true,
+  imports     : [RouterLink, NgbCollapse, RouterLinkActive, NgbDropdown, NgbDropdownToggle, NgbDropdownMenu, TranslateModule]
 })
 export class LayoutHeaderComponent implements OnInit
 {

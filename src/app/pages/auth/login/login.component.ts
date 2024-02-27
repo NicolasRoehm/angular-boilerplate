@@ -1,25 +1,31 @@
 // Angular modules
-import { Component }    from '@angular/core';
-import { FormGroup, FormsModule, ReactiveFormsModule }    from '@angular/forms';
-import { FormControl }  from '@angular/forms';
-import { Validators }   from '@angular/forms';
-import { Router, RouterLink }       from '@angular/router';
+import { NgClass }             from '@angular/common';
+import { NgIf }                from '@angular/common';
+import { Component }           from '@angular/core';
+import { FormGroup }           from '@angular/forms';
+import { FormsModule }         from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormControl }         from '@angular/forms';
+import { Validators }          from '@angular/forms';
+import { Router }              from '@angular/router';
+import { RouterLink }          from '@angular/router';
+
+// External modules
+import { TranslateModule }     from '@ngx-translate/core';
 
 // Internal modules
-import { environment }  from '@env/environment';
+import { environment }         from '@env/environment';
 
 // Services
-import { AppService }   from '@services/app.service';
-import { StoreService } from '@services/store.service';
-import { TranslateModule } from '@ngx-translate/core';
-import { NgClass, NgIf } from '@angular/common';
+import { AppService }          from '@services/app.service';
+import { StoreService }        from '@services/store.service';
 
 @Component({
-    selector: 'app-login',
-    templateUrl: './login.component.html',
-    styleUrls: ['./login.component.scss'],
-    standalone: true,
-    imports: [FormsModule, ReactiveFormsModule, NgClass, NgIf, RouterLink, TranslateModule]
+  selector    : 'app-login',
+  templateUrl : './login.component.html',
+  styleUrls   : ['./login.component.scss'],
+  standalone  : true,
+  imports     : [FormsModule, ReactiveFormsModule, NgClass, NgIf, RouterLink, TranslateModule]
 })
 export class LoginComponent
 {

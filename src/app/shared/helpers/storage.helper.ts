@@ -33,6 +33,9 @@ export class StorageHelper
 
   // public static getToken() : AuthResponse | null
   // {
+  //   // Prevent SSR error
+  //   if (typeof localStorage === 'undefined')
+  //     return undefined;
   //   const data = StorageHelper.getItem(StorageKey.TOKEN);
   //   return data ? new AuthResponse(data) : null;
   // }

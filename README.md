@@ -1,6 +1,6 @@
 # EasyAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
 
 ## Usage
 - Rename `EasyAngular` and `easy-angular` with your project name
