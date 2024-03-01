@@ -69,12 +69,12 @@ export class ForgotPasswordComponent
 
   private async forgotPassword() : Promise<void>
   {
-    this.storeService.setIsLoading(true);
+    this.storeService.isLoading.set(true);
 
     const email   = this.formGroup.controls.email.getRawValue();
     const success = await this.appService.forgotPassword(email);
 
-    this.storeService.setIsLoading(false);
+    this.storeService.isLoading.set(false);
 
     if (!success)
       return;

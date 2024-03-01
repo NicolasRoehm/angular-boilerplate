@@ -3,6 +3,9 @@ import { NgIf }                 from '@angular/common';
 import { Component }            from '@angular/core';
 import { OnInit }               from '@angular/core';
 
+// Services
+import { StoreService }         from '@services/store.service';
+
 // Components
 import { ProgressBarComponent } from '@blocks/progress-bar/progress-bar.component';
 import { PageLayoutComponent }  from '@layouts/page-layout/page-layout.component';
@@ -16,11 +19,11 @@ import { PageLayoutComponent }  from '@layouts/page-layout/page-layout.component
 })
 export class HomeComponent implements OnInit
 {
-  public isLoading : boolean = true;
-
   constructor
   (
-  ) { }
+    public storeService : StoreService
+  )
+  { }
 
   // -------------------------------------------------------------------------------
   // NOTE Init ---------------------------------------------------------------------
@@ -30,7 +33,7 @@ export class HomeComponent implements OnInit
   {
     setTimeout(_ =>
     {
-      this.isLoading = false;
+      this.storeService.isLoading.set(false);
     }, 2000);
   }
 

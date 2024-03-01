@@ -1,9 +1,9 @@
 <app-page-layout>
   <div class="container my-3">
 
-    <app-progress-bar *ngIf="isLoading"></app-progress-bar>
+    <app-progress-bar *ngIf="storeService.isLoading()"></app-progress-bar>
 
-    <ng-container *ngIf="!isLoading">
+    <ng-container *ngIf="!storeService.isLoading()">
       <div class="text-center">
         Let's start the project!
       </div>

@@ -136,14 +136,14 @@ export class AppService
     instance.interceptors.request.use((config) =>
     {
       console.log('interceptors.request.config', config);
-      this.storeService.setIsLoading(true);
+      this.storeService.isLoading.set(true);
 
       return config;
     },
     (error) =>
     {
       console.log('interceptors.request.error', error);
-      this.storeService.setIsLoading(false);
+      this.storeService.isLoading.set(false);
 
       this.toastManager.quickShow(error);
       return Promise.reject(error);
@@ -155,14 +155,14 @@ export class AppService
     instance.interceptors.response.use((response) =>
     {
       console.log('interceptors.response.response', response);
-      this.storeService.setIsLoading(false);
+      this.storeService.isLoading.set(false);
 
       return response;
     },
     async (error : AxiosError) =>
     {
       console.log('interceptors.response.error', error);
-      this.storeService.setIsLoading(false);
+      this.storeService.isLoading.set(false);
 
       // NOTE Prevent request canceled error
       if (error.code === 'ERR_CANCELED')

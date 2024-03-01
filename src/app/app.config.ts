@@ -66,7 +66,6 @@ export const appConfig : ApplicationConfig = {
 
     // External modules
 
-
     // Services
     StoreService,
     AppService,

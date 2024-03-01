@@ -4,9 +4,6 @@ import { Component }        from '@angular/core';
 import { OnInit }           from '@angular/core';
 import { RouterOutlet }     from '@angular/router';
 
-// External modules
-import { TranslateService } from '@ngx-translate/core';
-
 // Services
 import { StoreService }     from '@services/store.service';
 
@@ -22,23 +19,11 @@ import { ToastComponent }   from '@blocks/toast/toast.component';
 })
 export class AppComponent implements OnInit
 {
-  public isServerSide : boolean;
-
   constructor
   (
-    private storeService     : StoreService,
-    private translateService : TranslateService,
+    public storeService : StoreService,
   )
   {
-    this.isServerSide = this.storeService.getIsServer();
-
-    // NOTE This language will be used as a fallback when a translation isn't found in the current language
-    this.translateService.setDefaultLang('en');
-    // NOTE The lang to use, if the lang isn't available, it will use the current loader to get them
-    // let userLanguage = StorageHelper.getLanguage();
-    // if (!userLanguage)
-    let userLanguage = 'en';
-    this.translateService.use(userLanguage);
   }
 
   // -------------------------------------------------------------------------------

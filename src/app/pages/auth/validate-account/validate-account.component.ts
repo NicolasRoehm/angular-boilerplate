@@ -90,12 +90,12 @@ export class ValidateAccountComponent implements OnInit
 
   private async validateNewAccount() : Promise<void>
   {
-    this.storeService.setIsLoading(true);
+    this.storeService.isLoading.set(true);
 
     const password = this.formGroup.controls.password.getRawValue();
     const success  = await this.appService.validateAccount(this.tokenFromUrl, password);
 
-    this.storeService.setIsLoading(false);
+    this.storeService.isLoading.set(false);
 
     if (!success)
       return;

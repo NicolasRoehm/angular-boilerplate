@@ -78,13 +78,13 @@ export class LoginComponent
 
   private async authenticate() : Promise<void>
   {
-    this.storeService.setIsLoading(true);
+    this.storeService.isLoading.set(true);
 
     const email    = this.formGroup.controls.email.getRawValue();
     const password = this.formGroup.controls.password.getRawValue();
     const success  = await this.appService.authenticate(email, password);
 
-    this.storeService.setIsLoading(false);
+    this.storeService.isLoading.set(false);
 
     if (!success)
       return;
