@@ -70,7 +70,7 @@ ng-serve
 - [ngx-translate](https://github.com/ngx-translate/core) : Internationalization library
 
 ## Tools
-- Generate models form JSON - https://app.quicktype.io/
+- Generate models from JSON - https://app.quicktype.io/
 - Generate favicon from SVG - https://realfavicongenerator.net/
 
 ## Angular CLI commands
