@@ -2,7 +2,7 @@
 
 Welcome to the EasyAngular boilerplate! This project is designed to help you quickly start a new **Angular 18** project with **Bootstrap 5** and various useful libraries. It comes with pre-coded elements to streamline your development process.
 
-## ⚙️ Getting started
+## Getting started
 ### Prerequisites
 
 Make sure you have the following installed :
@@ -17,7 +17,7 @@ cd angular-boilerplate
 npm install
 ```
 
-### Usage
+### ✒️ Usage
 - Rename `EasyAngular` and `easy-angular` with your project name
 - Place favicon generated with [RealFavIconGenerator](https://realfavicongenerator.net/) into `src/assets/img/favicon` folder
 
@@ -73,7 +73,7 @@ ng-serve
 - Generate models from JSON - https://app.quicktype.io/
 - Generate favicon from SVG - https://realfavicongenerator.net/
 
-## 🔎 Angular CLI commands
+## Angular CLI commands
 ### Code scaffolding
 Generate a new component :
 ```sh
