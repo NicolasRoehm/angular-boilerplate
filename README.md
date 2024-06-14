@@ -31,21 +31,36 @@ ng-serve
 ## Boilerplate content
 ### Source code structure
 
-<img src="./src/assets/img/project/folder-structure.png" alt="Project Structure" style="float:left"/>
-
-- Pages : - Auth (login, forgot password, validate account) with 2 possible layouts
-  - Home
-  - 404
-- Shared components
-  - Blocks : toast & progress bar
-  - Forms : confirm
-  - Layouts : page & header
-  - Modals : wrapper
-- Enums : endpoints / environments / storage keys
-- Helpers : storage / string
-- Services : app (for requests) / store (for state management using signals)
-- I18n : en.json (for internationalization)
-
+<table>
+  <tr>
+    <td>
+      <img src="./src/assets/img/project/folder-structure.png" alt="Project Structure" width="200"/>
+    </td>
+    <td>
+      <ul>
+        <li>Pages :
+          <ul>
+            <li>Auth (login, forgot password, validate account) with 2 possible layouts</li>
+            <li>Home</li>
+            <li>404</li>
+          </ul>
+        </li>
+        <li>Shared components
+          <ul>
+            <li>Blocks : toast & progress bar</li>
+            <li>Forms : confirm</li>
+            <li>Layouts : page & header</li>
+            <li>Modals : wrapper</li>
+          </ul>
+        </li>
+        <li>Enums : endpoints / environments / storage keys</li>
+        <li>Helpers : storage / string</li>
+        <li>Services : app (for requests) / store (for state management using signals)</li>
+        <li>I18n : en.json (for internationalization)</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ### Included packages
 - [Bootstrap 5](https://getbootstrap.com/) : SCSS style & [ng-bootstrap](https://ng-bootstrap.github.io/) components
