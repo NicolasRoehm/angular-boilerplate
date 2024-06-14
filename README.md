@@ -30,8 +30,10 @@ ng-serve
 
 ## Boilerplate content
 ### Source code structure
-- Pages :
-  - Auth (login, forgot password, validate account) with 2 possible layouts
+
+<img src="./src/assets/img/project/folder-structure.png" alt="Project Structure" style="float:left"/>
+
+- Pages : - Auth (login, forgot password, validate account) with 2 possible layouts
   - Home
   - 404
 - Shared components
@@ -43,6 +45,7 @@ ng-serve
 - Helpers : storage / string
 - Services : app (for requests) / store (for state management using signals)
 - I18n : en.json (for internationalization)
+
 
 ### Included packages
 - [Bootstrap 5](https://getbootstrap.com/) : SCSS style & [ng-bootstrap](https://ng-bootstrap.github.io/) components
