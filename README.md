@@ -1,8 +1,8 @@
-# EasyAngular
+# ▶️ EasyAngular
 
 Welcome to the EasyAngular boilerplate! This project is designed to help you quickly start a new **Angular 18** project with **Bootstrap 5** and various useful libraries. It comes with pre-coded elements to streamline your development process.
 
-## Getting started
+## ⚙️ Getting started
 ### Prerequisites
 
 Make sure you have the following installed :
@@ -29,7 +29,7 @@ ng-serve
 ```
 
 ## Boilerplate content
-### Source code structure
+### 🗂️ Source code structure
 
 <table>
   <tr>
@@ -62,18 +62,18 @@ ng-serve
   </tr>
 </table>
 
-### Included packages
+### 🌐 Included packages
 - [Bootstrap 5](https://getbootstrap.com/) : SCSS style & [ng-bootstrap](https://ng-bootstrap.github.io/) components
 - [Axios](https://github.com/axios/axios) : HTTP client
 - [ArrayTyper](https://github.com/FranzStrudel/-caliatys-array-typer) : Utility for type-safe array operations
 - [angular-svg-icon](https://github.com/czeckd/angular-svg-icon) : SVG icon support
 - [ngx-translate](https://github.com/ngx-translate/core) : Internationalization library
 
-## Tools
+## 🛠️ Tools
 - Generate models from JSON - https://app.quicktype.io/
 - Generate favicon from SVG - https://realfavicongenerator.net/
 
-## Angular CLI commands
+## 🔎 Angular CLI commands
 ### Code scaffolding
 Generate a new component :
 ```sh
