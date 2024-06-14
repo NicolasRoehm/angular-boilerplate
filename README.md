@@ -1,20 +1,37 @@
 # EasyAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.1.
+Welcome to the EasyAngular boilerplate! This project is designed to help you quickly start a new Angular 18 project with Bootstrap 5 and various useful libraries. It comes with pre-coded elements to streamline your development process.
 
-## Usage
+## Getting started
+### Prerequisites
+
+Make sure you have the following installed :
+- [Node.js](https://nodejs.org/) (version 20)
+- [Angular CLI](https://angular.dev/) (version 18) using `npm install -g @angular/cli`
+
+### Installation
+Clone the repository :
+```sh
+git clone https://github.com/NicolasRoehm/angular-boilerplate.git
+cd angular-boilerplate
+npm install
+```
+
+### Usage
 - Rename `EasyAngular` and `easy-angular` with your project name
 - Place favicon generated with [RealFavIconGenerator](https://realfavicongenerator.net/) into `src/assets/img/favicon` folder
 
-## Tools
-- Generate models form JSON - https://app.quicktype.io/
-- Generate favicon from SVG - https://realfavicongenerator.net/
+### Development server
+
+Run the following command for a development server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+```sh
+ng-serve
+```
 
 ## Boilerplate content
-
-### Source code
+### Source code structure
 - Pages :
-  - Auth (login, forgot pwd, validate account) with 2 possible layouts
+  - Auth (login, forgot password, validate account) with 2 possible layouts
   - Home
   - 404
 - Shared components
@@ -24,36 +41,47 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   - Modals : wrapper
 - Enums : endpoints / environments / storage keys
 - Helpers : storage / string
-- Services : app (for requests) / store (for state management)
-- I18n : en.json
+- Services : app (for requests) / store (for state management using signals)
+- I18n : en.json (for internationalization)
 
-### Packages
-- [Bootstrap 5](https://getbootstrap.com/) scss style & [ng-bootstrap](https://ng-bootstrap.github.io/) components
-- [Axios](https://github.com/axios/axios) fetch wrapper
-- [ArrayTyper](https://github.com/FranzStrudel/-caliatys-array-typer)
-- [angular-svg-icon](https://github.com/czeckd/angular-svg-icon)
-- [ngx-translate](https://github.com/ngx-translate/core)
+### Included packages
+- [Bootstrap 5](https://getbootstrap.com/) : SCSS style & [ng-bootstrap](https://ng-bootstrap.github.io/) components
+- [Axios](https://github.com/axios/axios) : HTTP client
+- [ArrayTyper](https://github.com/FranzStrudel/-caliatys-array-typer) : Utility for type-safe array operations
+- [angular-svg-icon](https://github.com/czeckd/angular-svg-icon) : SVG icon support
+- [ngx-translate](https://github.com/ngx-translate/core) : Internationalization library
 
-## Development server
+## Tools
+- Generate models form JSON - https://app.quicktype.io/
+- Generate favicon from SVG - https://realfavicongenerator.net/
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Angular CLI commands
+### Code scaffolding
+Generate a new component :
+```sh
+ng generate component component-name
+```
+You can also use `ng generate` for directives, pipes, services, classes, guards, interfaces, enums, and modules.
 
-## Code scaffolding
+### Build
+Build the project :
+```sh
+ng build
+```
+The build artifacts will be stored in the `dist/` directory.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Running tests
+#### Unit tests
+Run unit tests via Karma :
+```sh
+ng test
+```
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+#### End-to-End tests
+Run end-to-end tests via a platform of your choice. You need to add a package that implements end-to-end testing capabilities :
+```sh
+ng e2e
+```
 
 ## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+To get more help on the Angular CLI, use `ng help` or visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
