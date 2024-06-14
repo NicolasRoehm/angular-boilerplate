@@ -1,6 +1,6 @@
 # EasyAngular
 
-Welcome to the EasyAngular boilerplate! This project is designed to help you quickly start a new Angular 18 project with Bootstrap 5 and various useful libraries. It comes with pre-coded elements to streamline your development process.
+Welcome to the EasyAngular boilerplate! This project is designed to help you quickly start a new **Angular 18** project with **Bootstrap 5** and various useful libraries. It comes with pre-coded elements to streamline your development process.
 
 ## Getting started
 ### Prerequisites
@@ -38,14 +38,14 @@ ng-serve
     </td>
     <td>
       <ul>
-        <li>Pages :
+        <li><strong>Pages</strong>
           <ul>
             <li>Auth (login, forgot password, validate account) with 2 possible layouts</li>
             <li>Home</li>
             <li>404</li>
           </ul>
         </li>
-        <li>Shared components
+        <li><strong>Shared components</strong>
           <ul>
             <li>Blocks : toast & progress bar</li>
             <li>Forms : confirm</li>
@@ -53,10 +53,10 @@ ng-serve
             <li>Modals : wrapper</li>
           </ul>
         </li>
-        <li>Enums : endpoints / environments / storage keys</li>
-        <li>Helpers : storage / string</li>
-        <li>Services : app (for requests) / store (for state management using signals)</li>
-        <li>I18n : en.json (for internationalization)</li>
+        <li><strong>Enums</strong> : endpoints / environments / storage keys</li>
+        <li><strong>Helpers</strong> : storage / string</li>
+        <li><strong>Services</strong> : app (for requests) / store (for state management using signals)</li>
+        <li><strong>i18n</strong> : en.json (for internationalization)</li>
       </ul>
     </td>
   </tr>
